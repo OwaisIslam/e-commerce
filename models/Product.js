@@ -38,6 +38,13 @@ Product.init({
       isNumeric: true,
       msg: 'Please enter a number!'
     }
+  },
+  category_id: {
+    type: DataTypes.INTEGER,
+    references: {
+      model: 'category',
+      key: 'id'
+    }
   }
 }, {
   sequelize,
