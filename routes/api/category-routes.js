@@ -4,7 +4,7 @@ const {
   Product
 } = require('../../models');
 
-
+// Get all categories and show their related products
 router.get('/', (req, res) => {
   Category.findAll({
       include: [{
@@ -18,6 +18,7 @@ router.get('/', (req, res) => {
     })
 });
 
+// Get specific category and show their related products
 router.get('/:id', (req, res) => {
   Category.findOne({
       where: {
@@ -42,6 +43,7 @@ router.get('/:id', (req, res) => {
     })
 });
 
+// Create a new category
 router.post('/', (req, res) => {
   Category.create({
       category_name: req.body.category_name
@@ -53,6 +55,7 @@ router.post('/', (req, res) => {
     });
 });
 
+// Update a category name
 router.put('/:id', (req, res) => {
   Category.update(req.body, {
       where: {
@@ -74,6 +77,7 @@ router.put('/:id', (req, res) => {
     });
 });
 
+// Delete a category
 router.delete('/:id', (req, res) => {
   Category.destroy({
       where: {
