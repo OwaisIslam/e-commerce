@@ -26,8 +26,7 @@ Product.init({
     type: DataTypes.DECIMAL,
     allowNull: false,
     validate: {
-      isDecimal: true,
-      msg: 'Please enter a number!'
+      isDecimal: true
     }
   },
   stock: {
@@ -35,8 +34,7 @@ Product.init({
     allowNull: false,
     defaultValue: 10,
     validate: {
-      isNumeric: true,
-      msg: 'Please enter a number!'
+      isNumeric: true
     }
   },
   category_id: {
