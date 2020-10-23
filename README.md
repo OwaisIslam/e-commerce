@@ -14,8 +14,8 @@ The user can perform various CRUD operations on these tables via API calls:
 
 - GET routes to return all categories, all products, and all tags
 - GET routes to return a single category, single product, and single tag
-- POST routes to create a new category, product, and tag
-- PUT routes to update a product tag id and a category or tag name
-- DELETE routes to delete a single category, product, and tag
+- POST routes to create a new category, new product, and new tag
+- PUT routes to update a product tag id and update a category or tag name
+- DELETE routes to delete a single category, single product, and single tag
 
 ## Walkthrough Video
