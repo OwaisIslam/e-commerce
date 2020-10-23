@@ -21,6 +21,10 @@ router.get('/', (req, res) => {
       ]
     })
     .then(dbProductData => res.json(dbProductData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    })
 });
 
 // Get one product and its associated Category and Tag data
